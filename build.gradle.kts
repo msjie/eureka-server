@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.9.RELEASE"
 	kotlin("jvm") version "1.3.71"
 	kotlin("plugin.spring") version "1.3.71"
+	id("idea")
 }
 
 group = "cn.yusite.example.spring.cloud"
@@ -48,3 +49,11 @@ tasks.withType<KotlinCompile> {
 		jvmTarget = "1.8"
 	}
 }
+
+idea {
+	module {
+		isDownloadSources = true
+		isDownloadJavadoc = false
+	}
+}
+
